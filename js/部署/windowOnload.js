@@ -1,0 +1,1 @@
+window.onload=function(){let getBody;document.querySelector(".none-transition").className=""};

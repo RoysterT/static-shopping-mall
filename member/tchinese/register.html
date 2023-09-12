@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>註冊</title>
+    <link type="text/css" rel="stylesheet" href="../css/register.css">
+    <link rel="shortcut icon" href="../../favicon.svg">
+</head>
+
+<body>
+    <div class="background"></div>
+    <a href="../../index.html">
+        <div class="back-to-index">
+            <i class="cart-iconfont iconfont">&#xe6ff;</i>
+            <span>回到主頁</span>
+        </div>
+    </a>
+    <div class="choose-language">
+        <select onChange=javascript:window.open(this.options[this.selectedIndex].value) size=1 name=select1
+            class="language-select">
+            <optgroup label="中文">
+                <option value="../register.html">简体中文</option>
+                <option value="../tchinese/register.html" selected>繁體中文</option>
+            </optgroup>
+            <optgroup label="其他語言">
+                <option value="../en/register.html">English</option>
+                <option value="../jp/register.html">日本語</option>
+                <option value="../ru/register.html">Русский</option>
+            </optgroup>
+        </select>
+    </div>
+    <div class="login-window">
+        <div class="window-right">
+            <span class="welcome-login">歡迎註冊</span>
+            <a href="login.html">
+                <div class="user-info-filling">
+                    <span class="user-info-filling-text">去登入</span>
+                    <div class="arrow">
+                        <i class="arrow1"></i>
+                        <i class="arrow2"></i>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="window-register">
+            <div class="login-content">
+                <b class="register-logo">註冊</b>
+                <!-- <form action="/index.html" class=""> -->
+                <div class="login-form">
+                    <input type="text" name="userName" id="userName" placeholder="賬戶名"
+                        class="login-input" required/><br /><br />
+                    <input type="password" id="userPwd" placeholder="密碼"
+                        class="login-input" required/><br /><br />
+                    <input type="submit" value="註冊" class="login-button"/>
+                </div>
+                <!-- </form> -->
+            </div>
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="/member/js/saveUserInfo.js"></script>
+
+</html>
