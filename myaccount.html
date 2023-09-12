@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="./favicon.svg">
+    <link rel="stylesheet" type="text/css" href="./css/all.css">
+    <link rel="stylesheet" type="text/css" href="./css/header.css">
+    <link rel="stylesheet" type="text/css" href="./css/search.css">
+    <link rel="stylesheet" type="text/css" href="./css/banner.css">
+    <link rel="stylesheet" type="text/css" href="./css/floatbar.css">
+    <link rel="stylesheet" type="text/css" href="./css/footer.css">
+    <script type="text/javascript" src="./js/index.js"></script>
+    <title>Document</title>
+</head>
+
+<body class="none-transition">
+    <!-- 背景 -->
+    <div class="background"></div>
+    <!-- 悬浮工具栏 -->
+    <div class="float-bar-wrapper" id="floatBar">
+        <div class="float-bar-item-all">
+            <div class="float-bar-item">
+                <i class="float-bar-iconfont iconfont">&#xe613;</i>
+                <span class="float-bar-item-text">人工客服</span>
+            </div>
+            <div class="float-bar-item">
+                <i class="float-bar-iconfont iconfont">&#xe672;</i>
+                <span class="float-bar-item-text">意见反馈</span>
+            </div>
+            <div class="float-bar-item" id="floatBarCart">
+                <i class="float-bar-iconfont iconfont">&#xe600;</i>
+                <i class="float-bar-iconfont-hover iconfont">&#xe603;</i>
+                <span class="float-bar-item-text">购物车</span>
+            </div>
+            <div class="float-bar-item" id="toTop">
+                <i class="float-bar-iconfont to-top-iconfont iconfont">&#xe64a;</i>
+                <span class="float-bar-item-text">返回顶部</span>
+            </div>
+        </div>
+    </div>
+    <!-- 头部 -->
+    <header>
+        <div class="header-content">
+            <div class="header-left-wrapper">
+                <div class="header-login-menu">
+                    <!-- 未登录 -->
+                    <b class="header-welcome-text" id="noLogin" style="display: block;">
+                        <span>嗨！欢迎来到商城！请先</span>
+                        <!-- 登录 -->
+                        <a href="./member/login.html" class="header-login">
+                            <i class="iconfont">&#xe609;</i>
+                        </a>
+                        <span class="header-login-separation">或</span>
+                        <!-- 注册 -->
+                        <a href="./member/register.html" class="header-login">
+                            <i class="iconfont">&#xe605;</i>
+                        </a>
+                        <span>!</span>
+                    </b>
+                    <!-- 已登录 -->
+                    <b class="header-welcome-text" id="isLogin" style="display: none;">
+                        <span>嗨，</span>
+                        <a href="./index.html" title="点此退出登录" style="color: #333;text-decoration: none;">
+                            <span id="userNameText"></span>
+                        </a>
+                        <span>！欢迎来到商城！</span>
+                    </b>
+                </div>
+            </div>
+            <div class="header-right-wrapper">
+                <div class="header-cart-menu">
+                    <div class="manage-my-account">
+                        <span class="my-account-text">我的商城</span>
+                        <!-- <div class="my-account-arr"></div> -->
+                        <div class="my-account-drop-down-wrapper">
+                            <div class="down-arrow-wrapper">
+                                <div class="down-arr"></div>
+                            </div>
+                            <a href="./404.html" class="my-account-drop-down-wrapper-item">
+                                <div title="这个没有做" class="my-purchase">购买记录</div>
+                            </a>
+                            <a href="./myaccount.html" class="my-account-drop-down-wrapper-item">
+                                <div title="这个没有做" class="my-account">账号管理</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-function" id="toManagePage" title="这个没有做">
+                    <i class="cart-iconfont iconfont">&#xe62d;</i>
+                    <span class="header-cart-text">商城后台</span>
+                </div>
+                <div class="header-function" id="customerService">
+                    <i class="cart-iconfont iconfont">&#xe613;</i>
+                    <span class="header-cart-text">联系客服</span>
+                </div>
+                <div class="header-function header-cart" id="headerCart">
+                    <i class="cart-iconfont iconfont">&#xe600;</i>
+                    <span class="header-cart-text">购物车</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- 搜索栏 -->
+    <div class="search-wrapper">
+        <div class="search-logo-box">
+            <div id="toIndex" style="cursor: pointer;">
+                <img src="./favicon.svg" class="search-wrapper-logo">
+                <span>商城名称</span>
+            </div>
+            <!-- <a href="/">
+                <img src="favicon.svg" class="search-wrapper-logo">
+                <span>商城名称</span>
+            </a> -->
+        </div>
+        <!-- 登录逻辑跳转主页 -->
+        <script>
+            var toIndex = document.getElementById("toIndex");
+            var url = "./index.html";
+            toIndex.onclick = function () {
+                // if(loginOrNot){
+                //     url+="index.html?userName="+userName;
+                // }
+                window.location.href = url;
+            }
+        </script>
+        <div class="search-bar-wrapper">
+            <div class="search-bar">
+                <form action="./search.html" method="get">
+                    <input type="text" name="p" class="search-box" id="searchBar" placeholder="搜啥啥没有" required>
+                    <div class="search-icon">
+                        <i class="search-iconfont iconfont">&#xe616;</i>
+                    </div>
+                    <button class="search-btn">搜&nbsp;&nbsp;&nbsp;索</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="content-box">
+
+    </div>
+    <!-- 底部备案 -->
+    <div class="footer-wrapper" style="position: absolute;bottom: 0;">
+        <div class="footer-beian-wrapper">
+            <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030502007232">
+                <img src="./img/beian.png" class="beian-logo" />
+                <span>粤公网安备 44030502007232号</span>
+            </a>
+            <span> | </span>
+            <a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备2021022294号</a>
+            <br />
+            <span>Copyright &copy; 2022 Rolnass All Rights Reserved</span>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="./js/header.js"></script>
+<script type="text/javascript" src="./js/addCart.js"></script>
+<script type="text/javascript" src="./js/login.js"></script>
+
+</html>

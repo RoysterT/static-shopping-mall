@@ -4,7 +4,7 @@ var headerService = document.getElementById("customerService");
 headerService.onclick = function () {
     alert("抱歉！商城目前暂不支持在线客服！");
 };
-floatBarService.onclick = function(){
+floatBarService.onclick = function () {
     headerService.onclick();
 };
 
@@ -17,7 +17,7 @@ feedback.onclick = function () {
 // 购物车
 var floatBarCart = document.getElementById("floatBarCart");
 floatBarCart.onclick = function () {
-    location.href = "/cart.html";
+    location.href = "./cart.html";
 };
 
 // 返回顶部

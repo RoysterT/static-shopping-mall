@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="../../favicon.svg">
+    <link rel="stylesheet" type="text/css" href="../../css/all.css">
+    <link rel="stylesheet" type="text/css" href="../../css/header.css">
+    <link rel="stylesheet" type="text/css" href="../../css/search.css">
+    <link rel="stylesheet" type="text/css" href="../../css/banner.css">
+    <link rel="stylesheet" type="text/css" href="../../css/floatbar.css">
+    <link rel="stylesheet" type="text/css" href="../../css/footer.css">
+    <link rel="stylesheet" type="text/css" href="../css/content.css">
+    <link rel="stylesheet" type="text/css" href="./css/intel.css">
+    <title>中央处理器-Intel</title>
+</head>
+
+<body class="none-transition">
+    <!-- 背景 -->
+    <div class="background"></div>
+    <!-- 悬浮工具栏 -->
+    <div class="float-bar-wrapper" id="floatBar">
+        <div class="float-bar-item-all">
+            <div class="float-bar-item">
+                <i class="float-bar-iconfont iconfont">&#xe613;</i>
+                <span class="float-bar-item-text">人工客服</span>
+            </div>
+            <div class="float-bar-item">
+                <i class="float-bar-iconfont iconfont">&#xe672;</i>
+                <span class="float-bar-item-text">意见反馈</span>
+            </div>
+            <div class="float-bar-item" id="floatBarCart">
+                <i class="float-bar-iconfont iconfont">&#xe600;</i>
+                <i class="float-bar-iconfont-hover iconfont">&#xe603;</i>
+                <span class="float-bar-item-text">购物车</span>
+            </div>
+            <div class="float-bar-item" id="toTop">
+                <i class="float-bar-iconfont to-top-iconfont iconfont">&#xe64a;</i>
+                <span class="float-bar-item-text">返回顶部</span>
+            </div>
+        </div>
+    </div>
+    <!-- 头部 -->
+    <header>
+        <div class="header-content">
+            <div class="header-left-wrapper">
+                <div class="header-login-menu">
+                    <!-- 未登录 -->
+                    <b class="header-welcome-text" id="noLogin" style="display: block;">
+                        <span>嗨！欢迎来到商城！请先</span>
+                        <!-- 登录 -->
+                        <a href="../../member/login.html" class="header-login">
+                            <i class="iconfont">&#xe609;</i>
+                        </a>
+                        <span class="header-login-separation">或</span>
+                        <!-- 注册 -->
+                        <a href="../../member/register.html" class="header-login">
+                            <i class="iconfont">&#xe605;</i>
+                        </a>
+                        <span>!</span>
+                    </b>
+                    <!-- 已登录 -->
+                    <b class="header-welcome-text" id="isLogin" style="display: none;">
+                        <span>嗨，</span>
+                        <a href="../../" title="点此退出登录" style="color: #333;text-decoration: none;">
+                            <span id="userNameText"></span>
+                        </a>
+                        <span>！欢迎来到商城！</span>
+                    </b>
+                </div>
+            </div>
+            <div class="header-right-wrapper">
+                <div class="header-cart-menu">
+                    <div class="manage-my-account">
+                        <span class="my-account-text">我的商城</span>
+                        <!-- <div class="my-account-arr"></div> -->
+                        <div class="my-account-drop-down-wrapper">
+                            <div class="down-arrow-wrapper">
+                                <div class="down-arr"></div>
+                            </div>
+                            <a href="../../404.html" class="my-account-drop-down-wrapper-item">
+                                <div title="这个没有做" class="my-purchase">购买记录</div>
+                            </a>
+                            <a href="../../myaccount.html" class="my-account-drop-down-wrapper-item">
+                                <div title="这个没有做" class="my-account">账号管理</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-function" id="toManagePage" title="这个没有做">
+                    <i class="cart-iconfont iconfont">&#xe62d;</i>
+                    <span class="header-cart-text">商城后台</span>
+                </div>
+                <div class="header-function" id="customerService">
+                    <i class="cart-iconfont iconfont">&#xe613;</i>
+                    <span class="header-cart-text">联系客服</span>
+                </div>
+                <div class="header-function header-cart" id="headerCart">
+                    <i class="cart-iconfont iconfont">&#xe600;</i>
+                    <span class="header-cart-text">购物车</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- 搜索栏 -->
+    <div class="search-wrapper">
+        <div class="search-logo-box">
+            <div id="toIndex" style="cursor: pointer;">
+                <img src="../../favicon.svg" class="search-wrapper-logo">
+                <span>商城名称</span>
+            </div>
+            <!-- <a href="/">
+                <img src="favicon.svg" class="search-wrapper-logo">
+                <span>商城名称</span>
+            </a> -->
+        </div>
+        <!-- 登录逻辑跳转主页 -->
+        <script>
+            var toIndex = document.getElementById("toIndex");
+            var url = "../../index.html";
+            toIndex.onclick = function () {
+                // if(loginOrNot){
+                //     url+="index.html?userName="+userName;
+                // }
+                window.location.href = url;
+            }
+        </script>
+        <div class="search-bar-wrapper">
+            <div class="search-bar">
+                <form action="../../search.html" method="get">
+                    <input type="text" name="p" class="search-box" id="searchBar" placeholder="搜啥啥没有" required>
+                    <div class="search-icon">
+                        <i class="search-iconfont iconfont">&#xe616;</i>
+                    </div>
+                    <button class="search-btn">搜&nbsp;&nbsp;&nbsp;索</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="banner">
+        <img src="./img/Intel/homepage-marquee-bg-blue-steel.png" class="banner-bg">
+        <img src="./img/Intel/banner1.jpg" alt="面向台式机的英特尔锐炫™ 3 显卡现已发布" class="banner-img">
+        <div class="banner-text-wrapper">
+            <img src="./img/Intel/intel-white-logo.svg" alt="Intel" class="banner-logo">
+            <h1 class="banner-text-title">面向台式机的英特尔<br />锐炫™ 3 显卡现已发布</h1>
+            <p class="banner-text-content">英特尔锐炫™ 显卡配备了先进的功能，助用户实现比以往更快的创作速度，以及在热门游戏上享受流畅的游戏体验。</p>
+        </div>
+    </div>
+    <div class="content-box">
+        <a href="https://www.intel.cn/content/www/cn/zh/products/details/processors/xeon.html" class="cpu-type-link">
+            <div class="cpu-type-wrapper xeon-wrapper">
+                <div class="cpu-icon">
+                    <img src="./img/Intel/xeon.png" alt="英特尔® 至强®" class="cpu-icon-img">
+                </div>
+                <div class="cpu-text">
+                    <h3 class="cpu-icon-title-text">英特尔® 至强® 处理器</h3>
+                    <p class="cpu-intro">面向一系列数据中心、边缘和工作站工作负载优化的性能、规模和效率。借助您了解和信任的一致、开放的英特尔® 架构，提高企业工作效率。</p>
+                </div>
+            </div>
+        </a>
+        <a href="https://www.intel.cn/content/www/cn/zh/products/details/processors/core.html" class="cpu-type-link">
+            <div class="cpu-type-wrapper xeon-wrapper">
+                <div class="cpu-icon">
+                    <img src="./img/Intel/core.png" alt="英特尔® 酷睿™" class="cpu-icon-img">
+                </div>
+                <div class="cpu-text">
+                    <h3 class="cpu-icon-title-text">英特尔® 酷睿™ 处理器</h3>
+                    <p class="cpu-intro">英特尔面向笔记本电脑和台式机推出的性能最高的 CPU 尽在英特尔® 酷睿™ 系列。从最高端的英特尔® 酷睿™ i9 处理器到超值的英特尔® 酷睿™ i3
+                        处理器，商务和创意专业人士、各个级别的游戏玩家以及其他人都可以找到能让他们完成更多任务的英特尔® 酷睿™ 处理器。</p>
+                </div>
+            </div>
+        </a>
+        <a href="https://www.intel.cn/content/www/cn/zh/products/details/processors/pentium.html" class="cpu-type-link">
+            <div class="cpu-type-wrapper xeon-wrapper">
+                <div class="cpu-icon">
+                    <img src="./img/Intel/pentium.png" alt="英特尔® 奔腾®" class="cpu-icon-img">
+                </div>
+                <div class="cpu-text">
+                    <h3 class="cpu-icon-title-text">英特尔® 奔腾® 处理器</h3>
+                    <p class="cpu-intro">使用搭载英特尔® 奔腾® 处理器的系统，发现性能、体验和价值的出色平衡。这些处理器适用于从笔记本电脑到变形电脑、台式机和迷你电脑的多种设备，支持
+                        Windows、Chrome 和 Linux 操作系统，使您可以灵活地选择最适合您需求的设备，同时确保为您提供所需的性能、体验和安全功能。轻松协作、创作和游戏。</p>
+                </div>
+            </div>
+        </a>
+        <a href="https://www.intel.cn/content/www/cn/zh/products/details/processors/pentium.html" class="cpu-type-link">
+            <div class="cpu-type-wrapper xeon-wrapper">
+                <div class="cpu-icon">
+                    <img src="./img/Intel/celeron.png" alt="英特尔® 赛扬®" class="cpu-icon-img">
+                </div>
+                <div class="cpu-text">
+                    <h3 class="cpu-icon-title-text">英特尔® 赛扬® 处理器</h3>
+                    <p class="cpu-intro">
+                        英特尔的入门级电脑可以帮助用户体验前所未有的协作、创建、学习和娱乐。用户可以通过笔记本电脑、谷歌笔记本、可转换电脑或台式机获得他们想要的良好体验，并为现代生活方式提供安全和连接选项。</p>
+                </div>
+            </div>
+        </a>
+        <div class="goods-wrapper">
+            <div class="single-product-wrapper">
+                <div class="product-img-wrapper">
+                    <img src="./img/Intel/i9-12900k.jpg" alt="i9-12900k" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-intro">
+                        <div class="product-price">
+                            <span class="product-integer">￥4399</span>
+                            <span class="product-decimal">.00</span>
+                        </div>
+                        <span class="product-name">酷睿™ i9-12900K</span>
+                        <div class="product-buttons">
+                            <button class="product-buy-button buyNowBtn">购&nbsp;&nbsp;&nbsp;&nbsp;买</button>
+                            <button class="product-add-to-list-button addToCartBtn">加购物车</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="single-product-wrapper">
+                <div class="product-img-wrapper">
+                    <img src="./img/Intel/i7-12700k.jpg" alt="i7-12700K" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-intro">
+                        <div class="product-price">
+                            <span class="product-integer">￥2999</span>
+                            <span class="product-decimal">.00</span>
+                        </div>
+                        <span class="product-name">酷睿™ i7-12700K</span>
+                        <div class="product-buttons">
+                            <button class="product-buy-button buyNowBtn">购&nbsp;&nbsp;&nbsp;&nbsp;买</button>
+                            <button class="product-add-to-list-button addToCartBtn">加购物车</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="single-product-wrapper">
+                <div class="product-img-wrapper">
+                    <img src="./img/Intel/i5-12600kf.jpg" alt="i5-12600KF" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-intro">
+                        <div class="product-price">
+                            <span class="product-integer">￥1999</span>
+                            <span class="product-decimal">.00</span>
+                        </div>
+                        <span class="product-name">酷睿™ i5-12600KF</span>
+                        <div class="product-buttons">
+                            <button class="product-buy-button buyNowBtn">购&nbsp;&nbsp;&nbsp;&nbsp;买</button>
+                            <button class="product-add-to-list-button addToCartBtn">加购物车</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="single-product-wrapper">
+                <div class="product-img-wrapper">
+                    <img src="./img/Intel/g6405.jpg" alt="G6405" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-intro">
+                        <div class="product-price">
+                            <span class="product-integer">￥649</span>
+                            <span class="product-decimal">.00</span>
+                        </div>
+                        <span class="product-name">奔腾® 金牌 G6405</span>
+                        <div class="product-buttons">
+                            <button class="product-buy-button buyNowBtn">购&nbsp;&nbsp;&nbsp;&nbsp;买</button>
+                            <button class="product-add-to-list-button addToCartBtn">加购物车</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="single-product-wrapper">
+                <div class="product-img-wrapper">
+                    <img src="./img/Intel/i5-12490f.jpg" alt="i5-12490F" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-intro">
+                        <div class="product-price">
+                            <span class="product-integer">￥1349</span>
+                            <span class="product-decimal">.00</span>
+                        </div>
+                        <span class="product-name">酷睿™ i5-12490F</span>
+                        <div class="product-buttons">
+                            <button class="product-buy-button buyNowBtn">购&nbsp;&nbsp;&nbsp;&nbsp;买</button>
+                            <button class="product-add-to-list-button addToCartBtn">加购物车</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="single-product-wrapper">
+                <div class="product-img-wrapper">
+                    <img src="./img/Intel/i9-12900ks.jpg" alt="i9-12900KS" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-intro">
+                        <div class="product-price">
+                            <span class="product-integer">￥5699</span>
+                            <span class="product-decimal">.00</span>
+                        </div>
+                        <span class="product-name">酷睿™ i9-12900KS</span>
+                        <div class="product-buttons">
+                            <button class="product-buy-button buyNowBtn">购&nbsp;&nbsp;&nbsp;&nbsp;买</button>
+                            <button class="product-add-to-list-button addToCartBtn">加购物车</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="single-product-wrapper">
+                <div class="product-img-wrapper">
+                    <img src="./img/Intel/i7-12700f.jpg" alt="i7-12700f" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-intro">
+                        <div class="product-price">
+                            <span class="product-integer">￥2449</span>
+                            <span class="product-decimal">.00</span>
+                        </div>
+                        <span class="product-name">酷睿™ i7-12700F</span>
+                        <div class="product-buttons">
+                            <button class="product-buy-button buyNowBtn">购&nbsp;&nbsp;&nbsp;&nbsp;买</button>
+                            <button class="product-add-to-list-button addToCartBtn">加购物车</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="single-product-wrapper">
+                <div class="product-img-wrapper">
+                    <img src="./img/Intel/i5-12600k.jpg" alt="i5-12600K" class="product-img">
+                </div>
+                <div class="product-content">
+                    <div class="product-intro">
+                        <div class="product-price">
+                            <span class="product-integer">￥2199</span>
+                            <span class="product-decimal">.00</span>
+                        </div>
+                        <span class="product-name">酷睿™ i5-12600K</span>
+                        <div class="product-buttons">
+                            <button class="product-buy-button buyNowBtn">购&nbsp;&nbsp;&nbsp;&nbsp;买</button>
+                            <button class="product-add-to-list-button addToCartBtn">加购物车</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 底部备案 -->
+    <div class="footer-wrapper" style="position: fixed;bottom: 0;">
+        <div class="footer-beian-wrapper">
+            <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030502007232">
+                <img src="../../img/beian.png" class="beian-logo" />
+                <span>粤公网安备 44030502007232号</span>
+            </a>
+            <span> | </span>
+            <a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备2021022294号</a>
+            <br />
+            <span>Copyright &copy; 2022 Rolnass All Rights Reserved</span>
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../js/windowOnload.js"></script>
+<script type="text/javascript" src="../../js/floatBarOtherPage.js"></script>
+<script type="text/javascript" src="../../js/headerOtherPage.js"></script>
+<script type="text/javascript" src="../../js/addCart.js"></script>
+<script type="text/javascript" src="../../js/login.js"></script>
+
+</html>

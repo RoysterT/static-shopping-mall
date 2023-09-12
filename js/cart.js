@@ -173,7 +173,7 @@ submitButton.onclick = function () {
         }
     }
     if (choseNum) {
-        location.href = "/success.html";
+        location.href = "./success.html";
     }
 }
 
@@ -181,7 +181,7 @@ submitButton.onclick = function () {
 var clearMyCart = document.getElementById("clearMyCart");
 clearMyCart.onclick = function () {
     localStorage.clear();
-    location.href = "/cart.html";
+    location.href = "./cart.html";
 }
 
 // 全选
@@ -197,13 +197,4 @@ selectAll.onclick = function () {
     totalPriceCount();
 }
 
-// 是否全选
-// var isAllChose=true;
-// for(var i=0;i<checkBox.length;i++){
-//     if(checkBox[i].checked=false){
-//         isSelectAll=false;
-//     }
-// }
-// if(isSelectAll){
-//     selectAll.checked=isSelectAll;
-// }
+localStorage.getItem()
