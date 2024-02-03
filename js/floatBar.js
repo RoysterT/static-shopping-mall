@@ -11,7 +11,7 @@ floatBarService.onclick = function () {
 // 意见反馈
 var feedback = document.getElementsByClassName("float-bar-item")[1];
 feedback.onclick = function () {
-    location.href = "mailto:211549130@m.gduf.edu.cn";
+    location.href = "mailto:i@royster.email";
 };
 
 // 购物车
